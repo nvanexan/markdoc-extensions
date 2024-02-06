@@ -1,0 +1,39 @@
+{
+  "name": "@nvanexan/markdoc-extensions",
+  "version": "0.0.1",
+  "description": "A tiny library for extending Markdoc parsing",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "start": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvanexan/markdoc-extensions.git"
+  },
+  "keywords": [
+    "Markdoc"
+  ],
+  "author": "@nvanexan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvanexan/markdoc-extensions/issues"
+  },
+  "homepage": "https://github.com/nvanexan/markdoc-extensions#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@markdoc/markdoc": "^0.4.0"
+  }
+}

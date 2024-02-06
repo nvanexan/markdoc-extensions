@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parses footnotes correctly 1`] = `
+Node {
+  "$$mdtype": "Node",
+  "annotations": [],
+  "attributes": {},
+  "children": [
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a paragraph with a footnote.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                1,
+                2,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 2,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 1,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "#fn1",
+                "id": "fnref1",
+                "label": "1",
+              },
+              "children": [],
+              "errors": [],
+              "inline": false,
+              "lines": [],
+              "slots": {},
+              "tag": undefined,
+              "type": "footnoteRef",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            1,
+            2,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 2,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 1,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        1,
+        2,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 2,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 1,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {
+        "class": "footnotes",
+        "ordered": true,
+      },
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {
+            "href": "#fnref1",
+            "id": "fn1",
+          },
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "this is the footnote",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                3,
+                4,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 4,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 3,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [],
+          "slots": {},
+          "tag": undefined,
+          "type": "footnoteItem",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [],
+      "slots": {},
+      "tag": undefined,
+      "type": "list",
+    },
+  ],
+  "errors": [],
+  "inline": false,
+  "lines": [],
+  "slots": {},
+  "tag": undefined,
+  "type": "document",
+}
+`;
+
+exports[`parses footnotes correctly 2`] = `"<article><p>This is a paragraph with a footnote.<sup class="footnote-ref"><a id="fnref1" href="#fn1">1</a></sup></p><ol class="footnotes"><li class="footnote-item" id="fn1">this is the footnote<a class="footnote-anchor" href="#fnref1">↩</a></li></ol></article>"`;
+
+exports[`parses highlights correctly 1`] = `
+Node {
+  "$$mdtype": "Node",
+  "annotations": [],
+  "attributes": {},
+  "children": [
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a ",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                0,
+                1,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 1,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 0,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "test",
+              },
+              "children": [],
+              "errors": [],
+              "inline": false,
+              "lines": [],
+              "slots": {},
+              "tag": undefined,
+              "type": "mark",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            0,
+            1,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 1,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 0,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        0,
+        1,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 1,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 0,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+  ],
+  "errors": [],
+  "inline": false,
+  "lines": [],
+  "slots": {},
+  "tag": undefined,
+  "type": "document",
+}
+`;
+
+exports[`parses highlights correctly 2`] = `"<article><p>This is a <mark>test</mark></p></article>"`;
