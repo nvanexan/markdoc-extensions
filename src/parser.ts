@@ -99,56 +99,59 @@ export class MarkdocExtendedParser {
     }
   }
 
-  private findFootnoteContainerNode(ast: Node) {
+  private findFootnoteContainerNodes(ast: Node) {
     const generator = ast.walk();
-    let container: Node | undefined;
-    let match = false;
+    let containers: Node[] = [];
+    let parent = undefined;
     for (const node of generator) {
       if (
         node.attributes.content &&
-        this.endNotePattern.test(node.attributes.content)
+        this.endNotePattern.test(node.attributes.content) &&
+        node.type === "text"
       ) {
-        match = true;
-        generator.return();
+        containers.push(parent as Node);
       }
-      if (node.type === "inline") container = node;
+      parent = node;
     }
-    return match ? container : undefined;
+    return containers;
   }
 
   private processFootnotes(ast: Node) {
     // Get a refrence to the node containing endNotes; if not present, early return
-    const fnContainerNode = this.findFootnoteContainerNode(ast);
-    if (!fnContainerNode) return;
+    const fnContainerNodes = this.findFootnoteContainerNodes(ast);
+    if (fnContainerNodes.length <= 0) return;
     // We have footnotes, so create a new list node which will contain the list of endNotes
     const fnList = new Markdoc.Ast.Node("list", {
       ordered: true,
       class: "footnotes",
     });
-    // Get the children nodes for each footnote item
-    const fnItems = this.getFootnoteItemNodes(fnContainerNode.children);
-    for (const fn of fnItems) {
-      const token = this.endNotePattern.exec(fn[0].attributes.content);
-      if (token) {
-        // Remove the markdown footnote syntax (e.g. [^1]) from the string
-        fn[0].attributes.content = fn[0].attributes.content.replace(
-          token[0],
-          ""
-        );
-        // Create a new footnote item and append to the fnList
-        const id = token[1];
-        const fnItem = new Markdoc.Ast.Node(
-          "footnoteItem" as any,
-          {
-            id: `fn${id}`,
-            href: `#fnref${id}`,
-          },
-          fn
-        );
-        fnList.push(fnItem);
+
+    for (const fnContainerNode of fnContainerNodes.reverse()) {
+      // Get the children nodes for each footnote item
+      const fnItems = this.getFootnoteItemNodes(fnContainerNode.children);
+      for (const fn of fnItems) {
+        const token = this.endNotePattern.exec(fn[0].attributes.content);
+        if (token) {
+          // Remove the markdown footnote syntax (e.g. [^1]) from the string
+          fn[0].attributes.content = fn[0].attributes.content.replace(
+            token[0],
+            ""
+          );
+          // Create a new footnote item and append to the fnList
+          const id = token[1];
+          const fnItem = new Markdoc.Ast.Node(
+            "footnoteItem" as any,
+            {
+              id: `fn${id}`,
+              href: `#fnref${id}`,
+            },
+            fn
+          );
+          fnList.children.unshift(fnItem);
+          ast.children.pop();
+        }
       }
     }
-    ast.children.pop(); // remove the last paragraph in the doc being replaced by the fnList
     ast.push(fnList);
   }
 
