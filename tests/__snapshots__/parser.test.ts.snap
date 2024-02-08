@@ -289,3 +289,1146 @@ Node {
 `;
 
 exports[`parses highlights correctly 2`] = `"<article><p>This is a <mark>test</mark></p></article>"`;
+
+exports[`parses multiple complex footnotes correctly 1`] = `
+Node {
+  "$$mdtype": "Node",
+  "annotations": [],
+  "attributes": {},
+  "children": [
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a paragraph with a footnote.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                1,
+                2,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 2,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 1,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "#fn1",
+                "id": "fnref1",
+                "label": "1",
+              },
+              "children": [],
+              "errors": [],
+              "inline": false,
+              "lines": [],
+              "slots": {},
+              "tag": undefined,
+              "type": "footnoteRef",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            1,
+            2,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 2,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 1,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        1,
+        2,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 2,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 1,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a paragraph with a second footnote.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                3,
+                4,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 4,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 3,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "#fn2",
+                "id": "fnref2",
+                "label": "2",
+              },
+              "children": [],
+              "errors": [],
+              "inline": false,
+              "lines": [],
+              "slots": {},
+              "tag": undefined,
+              "type": "footnoteRef",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            3,
+            4,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 4,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 3,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        3,
+        4,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 4,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 3,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a paragraph with a third footnote.[^3]",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                5,
+                6,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 6,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 5,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            5,
+            6,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 6,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 5,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        5,
+        6,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 6,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 5,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {
+        "class": "footnotes",
+        "ordered": true,
+      },
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {
+            "href": "#fnref1",
+            "id": "fn1",
+          },
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "Unlike ",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                7,
+                8,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 8,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 7,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "https://mdxjs.com/",
+              },
+              "children": [
+                Node {
+                  "$$mdtype": "Node",
+                  "annotations": [],
+                  "attributes": {
+                    "content": "MDX",
+                  },
+                  "children": [],
+                  "errors": [],
+                  "inline": true,
+                  "lines": [
+                    7,
+                    8,
+                  ],
+                  "location": {
+                    "end": {
+                      "character": undefined,
+                      "line": 8,
+                    },
+                    "file": undefined,
+                    "start": {
+                      "character": undefined,
+                      "line": 7,
+                    },
+                  },
+                  "slots": {},
+                  "tag": undefined,
+                  "type": "text",
+                },
+              ],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                7,
+                8,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 8,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 7,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "link",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": ", you don't embed code or react components. It's more like the ",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                7,
+                8,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 8,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 7,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "https://shopify.github.io/liquid/",
+              },
+              "children": [
+                Node {
+                  "$$mdtype": "Node",
+                  "annotations": [],
+                  "attributes": {
+                    "content": "Liquid template language",
+                  },
+                  "children": [],
+                  "errors": [],
+                  "inline": true,
+                  "lines": [
+                    7,
+                    8,
+                  ],
+                  "location": {
+                    "end": {
+                      "character": undefined,
+                      "line": 8,
+                    },
+                    "file": undefined,
+                    "start": {
+                      "character": undefined,
+                      "line": 7,
+                    },
+                  },
+                  "slots": {},
+                  "tag": undefined,
+                  "type": "text",
+                },
+              ],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                7,
+                8,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 8,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 7,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "link",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": " developed by Shopify.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                7,
+                8,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 8,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 7,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [],
+          "slots": {},
+          "tag": undefined,
+          "type": "footnoteItem",
+        },
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {
+            "href": "#fnref2",
+            "id": "fn2",
+          },
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "Note that you're not just confined to rendering semantic HTML tags. You can also render custom elements that correspond to your ",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                9,
+                10,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 10,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 9,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "https://developer.mozilla.org/en-US/docs/Web/Web_Components",
+              },
+              "children": [
+                Node {
+                  "$$mdtype": "Node",
+                  "annotations": [],
+                  "attributes": {
+                    "content": "web components",
+                  },
+                  "children": [],
+                  "errors": [],
+                  "inline": true,
+                  "lines": [
+                    9,
+                    10,
+                  ],
+                  "location": {
+                    "end": {
+                      "character": undefined,
+                      "line": 10,
+                    },
+                    "file": undefined,
+                    "start": {
+                      "character": undefined,
+                      "line": 9,
+                    },
+                  },
+                  "slots": {},
+                  "tag": undefined,
+                  "type": "text",
+                },
+              ],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                9,
+                10,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 10,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 9,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "link",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": ". And that's awesome. Because you can basically at that point get the benefit of both Markdown for content authoring and interactive richness that comes with web components and the built in shadow dom.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                9,
+                10,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 10,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 9,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [],
+          "slots": {},
+          "tag": undefined,
+          "type": "footnoteItem",
+        },
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {
+            "href": "#fnref3",
+            "id": "fn3",
+          },
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "The folks at Stripe who are maintaing Markdoc are quite responsive. Shoutout to them, and hat tip to the company for open sourcing this.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                11,
+                12,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 12,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 11,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [],
+          "slots": {},
+          "tag": undefined,
+          "type": "footnoteItem",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [],
+      "slots": {},
+      "tag": undefined,
+      "type": "list",
+    },
+  ],
+  "errors": [],
+  "inline": false,
+  "lines": [],
+  "slots": {},
+  "tag": undefined,
+  "type": "document",
+}
+`;
+
+exports[`parses multiple complex footnotes correctly 2`] = `"<article><p>This is a paragraph with a footnote.<sup class="footnote-ref"><a id="fnref1" href="#fn1">1</a></sup></p><p>This is a paragraph with a second footnote.<sup class="footnote-ref"><a id="fnref2" href="#fn2">2</a></sup></p><p>This is a paragraph with a third footnote.[^3]</p><ol class="footnotes"><li class="footnote-item" id="fn1">Unlike <a href="https://mdxjs.com/">MDX</a>, you don't embed code or react components. It's more like the <a href="https://shopify.github.io/liquid/">Liquid template language</a> developed by Shopify.<a class="footnote-anchor" href="#fnref1">↩</a></li><li class="footnote-item" id="fn2">Note that you're not just confined to rendering semantic HTML tags. You can also render custom elements that correspond to your <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">web components</a>. And that's awesome. Because you can basically at that point get the benefit of both Markdown for content authoring and interactive richness that comes with web components and the built in shadow dom.<a class="footnote-anchor" href="#fnref2">↩</a></li><li class="footnote-item" id="fn3">The folks at Stripe who are maintaing Markdoc are quite responsive. Shoutout to them, and hat tip to the company for open sourcing this.<a class="footnote-anchor" href="#fnref3">↩</a></li></ol></article>"`;
+
+exports[`parses multiple footnotes correctly 1`] = `
+Node {
+  "$$mdtype": "Node",
+  "annotations": [],
+  "attributes": {},
+  "children": [
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a paragraph with a footnote.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                1,
+                2,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 2,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 1,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "#fn1",
+                "id": "fnref1",
+                "label": "1",
+              },
+              "children": [],
+              "errors": [],
+              "inline": false,
+              "lines": [],
+              "slots": {},
+              "tag": undefined,
+              "type": "footnoteRef",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            1,
+            2,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 2,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 1,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        1,
+        2,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 2,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 1,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a paragraph with a second footnote.",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                3,
+                4,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 4,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 3,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "href": "#fn2",
+                "id": "fnref2",
+                "label": "2",
+              },
+              "children": [],
+              "errors": [],
+              "inline": false,
+              "lines": [],
+              "slots": {},
+              "tag": undefined,
+              "type": "footnoteRef",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            3,
+            4,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 4,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 3,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        3,
+        4,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 4,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 3,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {},
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {},
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "This is a paragraph with a third footnote.[^3]",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                5,
+                6,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 6,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 5,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [
+            5,
+            6,
+          ],
+          "location": {
+            "end": {
+              "character": undefined,
+              "line": 6,
+            },
+            "file": undefined,
+            "start": {
+              "character": undefined,
+              "line": 5,
+            },
+          },
+          "slots": {},
+          "tag": undefined,
+          "type": "inline",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [
+        5,
+        6,
+      ],
+      "location": {
+        "end": {
+          "character": undefined,
+          "line": 6,
+        },
+        "file": undefined,
+        "start": {
+          "character": undefined,
+          "line": 5,
+        },
+      },
+      "slots": {},
+      "tag": undefined,
+      "type": "paragraph",
+    },
+    Node {
+      "$$mdtype": "Node",
+      "annotations": [],
+      "attributes": {
+        "class": "footnotes",
+        "ordered": true,
+      },
+      "children": [
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {
+            "href": "#fnref1",
+            "id": "fn1",
+          },
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "this is the footnote",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                7,
+                8,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 8,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 7,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [],
+          "slots": {},
+          "tag": undefined,
+          "type": "footnoteItem",
+        },
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {
+            "href": "#fnref2",
+            "id": "fn2",
+          },
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "this is the second footnote",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                9,
+                10,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 10,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 9,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [],
+          "slots": {},
+          "tag": undefined,
+          "type": "footnoteItem",
+        },
+        Node {
+          "$$mdtype": "Node",
+          "annotations": [],
+          "attributes": {
+            "href": "#fnref3",
+            "id": "fn3",
+          },
+          "children": [
+            Node {
+              "$$mdtype": "Node",
+              "annotations": [],
+              "attributes": {
+                "content": "this is the third footnote",
+              },
+              "children": [],
+              "errors": [],
+              "inline": true,
+              "lines": [
+                11,
+                12,
+              ],
+              "location": {
+                "end": {
+                  "character": undefined,
+                  "line": 12,
+                },
+                "file": undefined,
+                "start": {
+                  "character": undefined,
+                  "line": 11,
+                },
+              },
+              "slots": {},
+              "tag": undefined,
+              "type": "text",
+            },
+          ],
+          "errors": [],
+          "inline": false,
+          "lines": [],
+          "slots": {},
+          "tag": undefined,
+          "type": "footnoteItem",
+        },
+      ],
+      "errors": [],
+      "inline": false,
+      "lines": [],
+      "slots": {},
+      "tag": undefined,
+      "type": "list",
+    },
+  ],
+  "errors": [],
+  "inline": false,
+  "lines": [],
+  "slots": {},
+  "tag": undefined,
+  "type": "document",
+}
+`;
+
+exports[`parses multiple footnotes correctly 2`] = `"<article><p>This is a paragraph with a footnote.<sup class="footnote-ref"><a id="fnref1" href="#fn1">1</a></sup></p><p>This is a paragraph with a second footnote.<sup class="footnote-ref"><a id="fnref2" href="#fn2">2</a></sup></p><p>This is a paragraph with a third footnote.[^3]</p><ol class="footnotes"><li class="footnote-item" id="fn1">this is the footnote<a class="footnote-anchor" href="#fnref1">↩</a></li><li class="footnote-item" id="fn2">this is the second footnote<a class="footnote-anchor" href="#fnref2">↩</a></li><li class="footnote-item" id="fn3">this is the third footnote<a class="footnote-anchor" href="#fnref3">↩</a></li></ol></article>"`;
